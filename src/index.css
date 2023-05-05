@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --blue: #032541;
+  --white: #ffffff;
+  --text: #09b5e0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}

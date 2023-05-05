@@ -1,0 +1,184 @@
+.backdrop-img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.1;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.backdrop-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+
+  @media screen and (max-width: 1000px) {
+    display: none;
+  }
+}
+
+.main-div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 9rem;
+  padding: 0 3rem;
+  gap: 3rem;
+  z-index: 10;
+
+  @media screen and (max-width: 661px) {
+    flex-direction: column;
+  }
+}
+
+.main-div .left-div {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: 661px) {
+    width: 100%;
+  }
+}
+
+.main-div .left-div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+  z-index: 20;
+}
+
+.main-div .right-div {
+  width: 70%;
+  margin-top: 1.5rem;
+
+  @media screen and (max-width: 661px) {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 661px) {
+    text-align: center;
+    margin-top: 0;
+  }
+}
+
+.main-div .right-div .textBox {
+  display: flex;
+  gap: 1rem;
+
+  @media screen and (max-width: 661px) {
+    text-align: center;
+    margin-top: 2rem;
+    justify-content: center;
+  }
+}
+
+.main-div .right-div .user-score {
+  display: flex;
+  margin-top: 2rem;
+  gap: 0.8rem;
+  align-items: center;
+
+  @media screen and (max-width: 661px) {
+    justify-content: center;
+  }
+}
+
+.main-div .right-div .user-score .circleRating {
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--blue);
+  flex-shrink: 0;
+  z-index: 60;
+}
+
+.main-div .right-div .user-score p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  width: 10%;
+  line-height: 1.5rem;
+}
+
+.main-div .right-div .user-score a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  @media screen and (max-width: 950px) {
+    margin-left: 2.5rem;
+  }
+}
+
+.main-div .right-div .user-score a:hover {
+  color: var(--text);
+}
+
+.main-div .right-div .overviewDiv {
+  margin-top: 2rem;
+}
+
+.main-div .right-div .overviewDiv h5 {
+  font-weight: 500;
+  font-size: 1.3rem;
+
+  @media screen and (max-width: 661px) {
+    margin-bottom: 1rem;
+  }
+}
+
+.main-div .right-div .bookBtn {
+  border: none;
+  background-color: var(--blue);
+  color: white;
+  padding: 1rem;
+  width: 15rem;
+  border-radius: 10rem;
+  font-size: 1.2rem;
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  cursor: pointer;
+
+  @media screen and (max-width: 668px) {
+    width: 10rem;
+  }
+
+  @media screen and (max-width: 1024px) {
+    position: relative;
+    bottom: 0;
+    margin: 2rem auto;
+  }
+}
+
+.main-div .right-div .bookBtn:focus {
+  outline: none;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.558);
+  z-index: 100;
+
+  /*   
+  @media (min-width: 768px) { 
+    display: block; 
+   }
+   */
+}

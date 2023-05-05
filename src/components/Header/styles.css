@@ -1,0 +1,56 @@
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0.5rem 0;
+  background-color: var(--blue);
+  z-index: 100;
+}
+
+header .contentWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4rem;
+
+  @media screen and (max-width: 661px) {
+    justify-content: center;
+  }
+}
+
+header .contentWrapper h1 {
+  color: var(--text);
+  cursor: pointer;
+}
+
+header .contentWrapper .menuItems {
+  list-style-type: none;
+  align-items: center;
+  display: flex;
+
+  @media screen and (max-width: 661px) {
+    display: none;
+  }
+}
+
+header .contentWrapper .menuItems .menuItem {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  margin: 0 15px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+header .contentWrapper .menuItems .menuItem.searchIcon {
+  margin-right: 0;
+}
+
+header .contentWrapper .menuItems .menuItem svg {
+  font-size: 18px;
+}
+
+header .contentWrapper .menuItems .menuItem:hover {
+  color: var(--text);
+}
