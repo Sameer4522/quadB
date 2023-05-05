@@ -15,8 +15,9 @@ const Trending = ({ data }) => {
         <h3>Trending Today</h3>
 
         <div className="movie-cards">
-          {data?.map((item) => (
+          {data?.map((item, index) => (
             <div
+              key={index}
               className="movieCard"
               onClick={() => navigate(`/${item?.show?.externals?.thetvdb}`)}
             >
@@ -33,13 +34,9 @@ const Trending = ({ data }) => {
                 {item?.show?.rating?.average && (
                   <CircleRating rating={item?.show?.rating?.average} />
                 )}
-
-                {/* {item?.show?.genres && (
-                  <div className="genre">{item?.show?.genres.slice(0, 2)}</div>
-                )} */}
               </div>
 
-              <div className="textBlock">
+              <div className="textBlock" key={index}>
                 <span className="title">{item?.show?.name}</span>
                 <span className="date">
                   {item?.show?.premiered

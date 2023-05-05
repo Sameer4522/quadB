@@ -9,7 +9,8 @@
   align-items: center;
 
   @media screen and (max-width: 661px) {
-    margin-top: 4rem;
+    margin-top: 3.8rem;
+    height: 25rem;
   }
 }
 

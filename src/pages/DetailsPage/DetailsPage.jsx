@@ -31,8 +31,6 @@ const DetailsPage = () => {
     fetchDataFromId();
   }, []);
 
-  console.log(data);
-
   let summary = data?.summary
     ? data?.summary?.replace(/(<([^>]+)>)/gi, "")
     : "Oops no data found!";
